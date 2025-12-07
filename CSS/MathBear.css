@@ -20,7 +20,7 @@ nav{
     text-decoration: none; /* remove underline from links */
 }
 :visited{
-    color: #ff0; /* visited link color */
+    color: #ffff00; /* visited link color */
     text-decoration: none; /* remove underline from links */
 }
 
@@ -161,17 +161,7 @@ main p {
     padding-left: 1.25rem; /* keep bullet indentation visible */
     font-size: 16pt; /* increased per request */
 }
-#MeetTheMathBearLink {
-    font-size: 1.125rem; /* slightly larger */
-    font-weight: 700; /* bold for emphasis */
-    color: inherit; /* follow surrounding color */
-    text-decoration: none;
-}
 
-#MeetTheMathBearLink:hover {
-    text-decoration: underline;
-}
 
-#MeetTheMathBearLink:focus {
-    outline: 2px solid rgba(0,0,0,0.15);
-}
+
+
