@@ -19,14 +19,15 @@ nav{
     color: #ffffff; /* unvisited link color */
     text-decoration: none; /* remove underline from links */
 }
+
 :visited{
-    color: #ffff00; /* visited link color */
+    color: #ffd400; /* visited link color (yellow) */
     text-decoration: none; /* remove underline from links */
 }
 
 /* Ensure all anchors show the visited color consistently */
 a:visited {
-    color: #ffff00;
+    color: #ffd400;
 }
 
 /* Header navigation bar container */
@@ -68,6 +69,41 @@ nav p {
 /* Make the nav container match the logo height so they stay visually aligned */
 nav, #topNavBar {
     height: var(--logo-size);
+}
+
+/* Header and footer link appearance: remove underlines and match font
+   Ensure visited links turn yellow consistently (color-only change allowed by browsers) */
+#HeaderNav a, nav a, #topNavBar a, header a {
+    text-decoration: none;
+    font-family: inherit; /* inherit site font so header links match */
+    font-size: inherit;
+    color: inherit;
+    font-weight: normal !important; /* ensure not bold */
+    font-style: normal !important; /* ensure not italic */
+}
+
+#Allfooter a, footer a {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+/* Stronger visited rule for header/footer anchors */
+#HeaderNav a:visited, nav a:visited, #Allfooter a:visited, footer a:visited, a:visited {
+    color: #ffd400 !important;
+}
+
+/* Underline links on hover/focus everywhere; include header/footer selectors
+   with higher specificity and use !important to override page-specific rules */
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+#HeaderNav a:hover, nav a:hover, header a:hover, #Allfooter a:hover, footer a:hover {
+    text-decoration: underline !important;
 }
 
 /* Math-themed subtle repeating background for page whitespace */
@@ -133,11 +169,19 @@ body {
 #SignUpLink2 {
     background: yellow; /* yellow background as requested */
     border: 2px solid #000; /* 2px black border as requested */
-    color: #000; /* black text for readability */
+    color: #000 !important; /* force black text in all states */
     padding: 6px 12px; /* add padding for clickable area */
     text-decoration: none; /* remove underline from link */
     display: inline-block; /* make it inline-block for proper box model */
     box-sizing: border-box; /* include padding/border in width */
+}
+
+/* Ensure SignUpLink2 remains black when visited/hovered/focused */
+#SignUpLink2:visited,
+#SignUpLink2:hover,
+#SignUpLink2:focus {
+    color: #000 !important;
+    text-decoration: none; /* keep underline behavior controlled by global hover rules */
 }
 
 /* Improve readability over patterned background: white backing for main headings and paragraphs */
@@ -166,6 +210,22 @@ main p {
     padding-left: 1.25rem; /* keep bullet indentation visible */
     font-size: 16pt; /* increased per request */
 }
+#MeetTheMathBearLink {
+    font-size: 1.125rem; /* slightly larger */
+    font-weight: normal; /* no bold */
+    font-style: normal; /* no italic */
+    color: inherit; /* follow surrounding color */
+    text-decoration: none;
+}
+
+#MeetTheMathBearLink:hover {
+    text-decoration: underline;
+}
+
+#MeetTheMathBearLink:focus {
+    outline: 2px solid rgba(0,0,0,0.15);
+}
+
 
 
 
