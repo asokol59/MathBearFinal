@@ -37,9 +37,12 @@ nav{
     border: none; /* remove decorative borders; canonical rule in MathBear.css */
 }
 :visited{
-    color: #ffff00; /* visited link color */
+    color: #ffd400; /* visited link color (yellow) */
     text-decoration: none; /* remove underline from links */
 }
+
+/* Ensure all anchors show the visited color consistently */
+a:visited { color: #ffd400; }
 /* Remove default paragraph spacing inside the nav so links sit inline wih the logo*/
 nav p {
     margin: 0; /* Remove default paragraph spacing inside the nav so links sit inline */
@@ -50,6 +53,11 @@ nav p {
     display: flex;  /* use flexbox for layout */
     align-items: center; /* vertically center text inside each nav item */
 }
+
+/* Ensure header/footer links match site style (no underline, same font) */
+#HeaderNav a, nav a, header a { text-decoration: none; font-family: inherit; font-size: inherit; color: inherit; }
+#Allfooter a, footer a { text-decoration: none; font-family: inherit; font-size: inherit; color: inherit; }
+#HeaderNav a:visited, nav a:visited, #Allfooter a:visited, footer a:visited { color: #ffd400; }
 
 /* Nav height is controlled centrally in CSS/MathBear.css */
 
@@ -135,5 +143,3 @@ body {
         flex-shrink: 0; /* prevent footer from shrinking */
         font-size: 14px; /* increase font size for readability */
 }
-
-
