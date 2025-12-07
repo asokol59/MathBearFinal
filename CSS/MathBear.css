@@ -21,13 +21,13 @@ nav{
 }
 
 :visited{
-    color: #ffd400; /* visited link color (yellow) */
+    color: #ffff00; /* visited link color (yellow) */
     text-decoration: none; /* remove underline from links */
 }
 
 /* Ensure all anchors show the visited color consistently */
 a:visited {
-    color: #ffd400;
+    color: #ffff00;
 }
 
 /* Header navigation bar container */
@@ -93,7 +93,7 @@ nav, #topNavBar {
 
 /* Stronger visited rule for header/footer anchors */
 #HeaderNav a:visited, nav a:visited, #Allfooter a:visited, footer a:visited, a:visited {
-    color: #ffd400 !important;
+    color: #ffff00 !important;
 }
 
 /* Underline links on hover/focus everywhere; include header/footer selectors
@@ -225,6 +225,7 @@ main p {
 #MeetTheMathBearLink:focus {
     outline: 2px solid rgba(0,0,0,0.15);
 }
+
 
 
 
