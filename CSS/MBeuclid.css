@@ -16,12 +16,12 @@ nav{
     text-decoration: none; /* remove underline from links */
 }
 :visited{
-    color: #ffd400; /* visited link color (yellow) */
+    color: #ffff00; /* visited link color (yellow) */
     text-decoration: none; /* remove underline from links */
 }
 
 /* Ensure all anchors show the visited color consistently */
-a:visited { color: #ffd400; }
+a:visited { color: #ffff00; }
 
 /* Header navigation bar container */
 #topNavBar {
@@ -208,3 +208,4 @@ body {
     font-size: 1rem;
     line-height: 1.45;
 }
+
