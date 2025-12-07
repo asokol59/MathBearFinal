@@ -1,0 +1,137 @@
+/* Navigation bar styles */
+nav{
+    background-color: #510983; /* purple background for nav */
+    color: #ffffff; /* make nav text readable on purple */
+    font-size: 16pt; /* increase nav text size */
+    padding: 12px 16px; /* add padding for spacing */
+    display: flex; /* use flexbox for layout */
+    gap: 5rem; /* space out nav items */
+    align-items: center; /* vertically center nav items */
+    border: 4px solid black; /* add border to nav */
+}
+
+/* --logo-size is defined centrally in CSS/MathBear.css */
+
+/* Header navigation bar container */
+#topNavBar {
+    display: flex;  /* use flexbox for layout */
+    align-items: center; /* vertically center items */
+    gap: 0rem; /* no gap between items */
+}
+
+ /* Allow the nav bar to grow and fill the remaining header space */
+#HeaderNav {
+    flex: 1 1 auto; /* allow to grow and shrink, all elements stay proportional to each other*/
+    box-sizing: border-box; /* include padding/border in width */
+    display: flex; /* use flexbox for layout to have all of the navigation links next to each other*/
+    flex-direction: row; /* nav items laid out horizontally across the banner */
+    align-items: center; /* vertically center nav items */
+    justify-content: space-evenly; /* center and evenly space the nav items */
+}
+
+/* Logo styling */
+#MainLogo {
+    display: block; /*adjust display to block for proper sizing */
+    height: var(--logo-size); /* set explicit height so other elements can match it */
+    width: auto; /* maintain aspect ratio */
+    border: none; /* remove decorative borders; canonical rule in MathBear.css */
+}
+:visited{
+    color: #FFFF00; /* visited link color */
+    text-decoration: none; /* remove underline from links */
+}
+/* Remove default paragraph spacing inside the nav so links sit inline wih the logo*/
+nav p {
+    margin: 0; /* Remove default paragraph spacing inside the nav so links sit inline */
+    /* use padding so the nav items size with content instead of a fixed height */
+    padding: 0.5rem 0.5rem; /* add comfortable vertical padding inside each nav item */
+    text-align: center; /* center text inside each nav item */
+    font-size: 16pt; /* increase nav text size */
+    display: flex;  /* use flexbox for layout */
+    align-items: center; /* vertically center text inside each nav item */
+}
+
+/* Nav height is controlled centrally in CSS/MathBear.css */
+
+/* Main content area styling */
+#MainContent{
+    /* center the main content block on the page */
+    max-width: 600px; /* limit max width of cotainer for readability */
+    margin: 2rem auto; /* vertical spacing and horizontal centering */
+    padding: 0 1rem; /* horizontal padding for content */
+    box-sizing: border-box; /* include padding/border in width */
+    text-align: center; /* center text inside the content area */
+}
+
+/* Email box styling on MeetTheMathBear page */
+#EmailSection {
+    margin: 1.25rem auto;
+}
+
+#EmailHeader {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#EmailBox {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #f6f6f6;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#EmailBox label { display:block; font-weight:700; margin-top:0.5rem; }
+#EmailBox input[type="email"], #EmailBox textarea {
+    width:100%;
+    padding:0.5rem;
+    margin-top:0.25rem;
+    box-sizing:border-box;
+    border:1px solid #888;
+    border-radius:6px;
+    font-size:1rem;
+}
+
+#EmailBox button {
+    display:block;
+    margin:0.75rem auto 0 auto;
+    padding:0.5rem 1rem;
+    font-size:1rem;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Make the page a column flex so footer can stick to bottom when content is short */
+html, body {
+    height: 100%; /* ensure full height for flex layout */
+    margin: 0; /* remove default margin */
+}
+body {
+    display: flex; /* use flexbox for overall page layout */
+    flex-direction: column; /* stack elements vertically */
+}
+
+/* allow main content to grow and push footer down */
+#MainContent {
+    flex: 1 0 auto; 
+}
+
+
+/* Footer: fixed small height (40px) and sits at bottom when page is short */
+#Allfooter {
+        background-color: #9d9d9d; /*sets background color to gray*/
+        color: #ffffff; /* make footer text white for readability */
+        text-align: center; /* center text */
+        padding: 0; /* no vertical padding so height is controlled explicitly */
+        height: 40px; /* requested visible height */
+        line-height: 15px; /* vertically center single-line text */
+        box-sizing: border-box; /* include padding/border in width */
+        border-top: 1px solid #000; /* thin border so it doesn't add too much height */
+        flex-shrink: 0; /* prevent footer from shrinking */
+        font-size: 14px; /* increase font size for readability */
+}
