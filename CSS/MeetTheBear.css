@@ -37,7 +37,7 @@ nav{
     border: none; /* remove decorative borders; canonical rule in MathBear.css */
 }
 :visited{
-    color: #FFFF00; /* visited link color */
+    color: #ff0; /* visited link color */
     text-decoration: none; /* remove underline from links */
 }
 /* Remove default paragraph spacing inside the nav so links sit inline wih the logo*/
@@ -135,3 +135,4 @@ body {
         flex-shrink: 0; /* prevent footer from shrinking */
         font-size: 14px; /* increase font size for readability */
 }
+
